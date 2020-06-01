@@ -1,13 +1,9 @@
-<h1> Recipes </h1>
-
-<a href="/recipes/new"> create a new recipe</a>
-<a href="/recipes/edit"> edit/delete recipe</a>
-<a href="/recipes/show"> show a recipe</a>
-
 <ul>
-<% @recipes.each do |recipe| %>
-<h2> <%= recipe.name %> </h2>
-<li> ingredients: <%= recipe.ingredients %> </li>
-<li> Cook Time: <%= recipe.cook_time %> </li>
+<% @recipes.each do |recipe|%>
+  <li>
+    <a href="/recipes/<%= recipe.id %>">Name: <%= recipe.name %></a>
+    Ingredients: <%= recipe.ingredients %>
+    Cook time <%= recipe.cook_time %>
+  </li>
 <% end %>
 </ul>
