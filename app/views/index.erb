@@ -1,0 +1,18 @@
+
+
+
+
+<% @recipes.each do |recipe| %>
+
+       <h1><%=recipe[:name]%></h1>
+        <%=recipe[:ingredients]%>
+        <%=recipe[:cook_time]%>
+
+<a href="/recipes/<%=recipe[:id]%>"> This Recipe </a>
+
+<% end %>
+
+
+
+<%# #!!!!!! RECIPE.ID versus RECIPE[:ID] ???????????????????%>
+<%# REMEMBER THAT WE'RE WORKING WITH HASHES- EVEN THE ITERATOR IS A HASH %>
